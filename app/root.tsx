@@ -4,8 +4,9 @@ import ThemeSwitch from '~/components/shared-layout/ThemeSwitch'
 import { useNonce } from '~/utils/nonce-provider.ts'
 import rootLinkElements from '~/utils/providers/rootLinkElements'
 import { useLoaderData } from '@remix-run/react'
-
+import HeaderWithSearch from './components/organisms/HeaderWithSearch'
 import { type loader } from './__root.server'
+import FooterLogoCentre from './components/organisms/Footer/FooterLogoCentre.tsx'
 
 import useTheme from './hooks/useTheme.tsx'
 export const links: LinksFunction = () => {
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <Document nonce={nonce} theme={theme}>
       <div className="flex h-screen flex-col justify-between">
+        <HeaderWithSearch />
         <div className="flex-1 ">
           <main className="grid h-full place-items-center">
             <h1 className="text-mega">bruh</h1>
@@ -30,12 +32,7 @@ export default function App() {
         <div className='container flex justify-between pb-5'>
           <ThemeSwitch userPreference={data.requestInfo.userPrefs.theme} />
         </div>
-        <div className='bg-blue-500 border border-blue-300'>
-          <button className='p-4 text-blue-900'>open</button>
-        </div>
-        <div className='bg-blue-500 border border-blue-300'>
-          <button className='p-4 text-blue-900'>close</button>
-        </div>
+        <FooterLogoCentre />
       </div>
     </Document>
   )
