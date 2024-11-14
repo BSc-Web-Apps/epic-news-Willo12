@@ -32,7 +32,7 @@ export default function App() {
         <div className='container flex justify-between pb-5'>
           <ThemeSwitch userPreference={data.requestInfo.userPrefs.theme} />
         </div>
-        <FooterLogoCentre />
+        <FooterLogoCentre companyName='JerseyGaming' altText='Company Logo' />
       </div>
     </Document>
   )
