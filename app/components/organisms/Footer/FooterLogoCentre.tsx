@@ -1,5 +1,4 @@
 import { Link, NavLink } from '@remix-run/react'
-import logo from '#app/assets/svg/icon-placeholder.svg'
 import SocialMediaButtons from '#app/components/molecules/SocialMediaButtons'
 import { type FooterProps } from './FooterBasic'
 import logoTest from '../../../../public/svg/logoTest.svg'
