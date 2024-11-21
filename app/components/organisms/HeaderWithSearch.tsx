@@ -1,5 +1,5 @@
 import { useMatches } from '@remix-run/react'
-import logo from '../../../public/svg/logoTest.svg'
+import logo from '../../assets/svg/logoTest.svg'
 import { SearchBar } from '../molecules/SearchBar'
 import LoginOrUserDropdown from './LoginOrUserDropdown'
 export default function HeaderWithSearch() {

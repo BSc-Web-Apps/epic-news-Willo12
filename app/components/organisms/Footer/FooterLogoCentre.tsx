@@ -1,6 +1,6 @@
 import SocialMediaButtons from '#app/components/molecules/SocialMediaButtons'
 import { Link, NavLink } from '@remix-run/react'
-import logoTest from '../../../../public/svg/logoTest.svg'
+import logoTest from '../../../assets/svg/logoTest.svg'
 import { type FooterProps } from './FooterBasic'
 const FooterLogoCentre = ({
   companyName = 'CHANGE THIS TO YOUR COMPANY NAME!',
