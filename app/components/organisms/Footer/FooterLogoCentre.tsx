@@ -2,6 +2,7 @@ import SocialMediaButtons from '#app/components/molecules/SocialMediaButtons'
 import { Link, NavLink } from '@remix-run/react'
 import logoTest from '../../../assets/svg/logoTest.svg'
 import { type FooterProps } from './FooterBasic'
+import NavLogo from '#app/components/molecules/NavLogo.js'
 const FooterLogoCentre = ({
   companyName = 'CHANGE THIS TO YOUR COMPANY NAME!',
   altText = 'Our company logo',
@@ -24,11 +25,7 @@ const FooterLogoCentre = ({
               <NavLink to="#">Nav Label</NavLink>
             </div>
           </div>
-
-          <Link to="/" className="flex w-48 items-center justify-center">
-            <img src={logoTest} alt={altText} />
-          </Link>
-
+          <NavLogo />
           <div
             className="flex flex-col items-start gap-6 py-8
 					font-bold text-secondary-foreground lg:flex-row dark:text-dark-secondary-foreground"
