@@ -7,6 +7,8 @@ import rootLinkElements from '~/utils/providers/rootLinkElements'
 import { type loader } from './__root.server'
 import HeaderWithSearch from './components/organisms/HeaderWithSearch'
 
+import HeroImage from './assets/jpg/sample-hero.jpg'
+
 import FooterLogoCentre from './components/organisms/Footer/FooterLogoCentre.tsx'
 import useTheme from './hooks/useTheme.tsx'
 import NewsHeadline from './components/organisms/NewsCard.tsx'
@@ -26,8 +28,8 @@ export default function App() {
       <div className="flex h-screen flex-col justify-between">
         <HeaderWithSearch />
         <div className="flex-1 ">
-          <main className="grid h-full place-items-center">
-            <HeroCallToAction image="https://www.helpguide.org/wp-content/uploads/2020/01/Social-Media-and-Mental-Health.webp">
+          <main className="">
+            <HeroCallToAction image={HeroImage}>
               <div className="flex flex-col gap-8 px-8">
                 <h2 className="text-h2">Welcome to Epic News</h2>
                 <p className="text-lg">
