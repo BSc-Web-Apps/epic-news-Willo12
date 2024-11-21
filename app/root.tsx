@@ -7,7 +7,7 @@ import rootLinkElements from '~/utils/providers/rootLinkElements'
 import { type loader } from './__root.server'
 import HeaderWithSearch from './components/organisms/HeaderWithSearch'
 
-import HeroImage from './assets/jpg/sample-hero.jpg'
+import HeroImage from "~/assets/jpg/sample-hero.jpg"
 
 import FooterLogoCentre from './components/organisms/Footer/FooterLogoCentre.tsx'
 import useTheme from './hooks/useTheme.tsx'
@@ -35,10 +35,10 @@ export default function App() {
                 <p className="text-lg">
                   Keep up to date with the latest tech news.
                 </p>
+                <button className=''>Learn more</button>
               </div>
             </HeroCallToAction>
 
-            <button className=''>Learn more</button>
           </main>
           <div className="w-full py-16">
           </div>

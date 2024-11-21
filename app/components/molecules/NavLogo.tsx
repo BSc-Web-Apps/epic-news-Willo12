@@ -1,5 +1,5 @@
 import { Link } from '@remix-run/react';
-import logo from '../../assets/svg/logoTest.svg'
+import logo from '~/assets/svg/logoTest.svg'
 
 interface LogoProps {
   linkDestination?: String;
