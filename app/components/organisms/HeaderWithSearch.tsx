@@ -1,8 +1,7 @@
-import { Link, useMatches } from '@remix-run/react'
-import logo from '../../assets/svg/logoTest.svg'
+import { useMatches } from '@remix-run/react'
+import NavLogo from '../molecules/NavLogo'
 import { SearchBar } from '../molecules/SearchBar'
 import LoginOrUserDropdown from './LoginOrUserDropdown'
-import NavLogo from '../molecules/NavLogo'
 export default function HeaderWithSearch() {
   const matches = useMatches()
   const isOnSearchPage = matches.find(m => m.id === 'routes/users+/index')
