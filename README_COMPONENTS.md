@@ -21,12 +21,12 @@ information, contact details, or even its own navigation menu.
 > import FooterBasic from '~/components/organisms/Footer'
 >
 > function App() {
-> 	return (
-> 		<FooterBasic
-> 			companyName="My Company Name"
-> 			altText="Alt text for my logo"
-> 		/>
-> 	)
+>  return (
+>   <FooterBasic
+>    companyName="My Company Name"
+>    altText="Alt text for my logo"
+>   />
+>  )
 > }
 > ```
 
@@ -46,12 +46,12 @@ information, contact details, or even its own navigation menu.
 > import FooterMenuRight from '~/components/organisms/Footer/FooterMenuRight.tsx'
 >
 > function App() {
-> 	return (
-> 		<FooterMenuRight
-> 			companyName="My Company Name"
-> 			altText="Alt text for my logo"
-> 		/>
-> 	)
+>  return (
+>   <FooterMenuRight
+>    companyName="My Company Name"
+>    altText="Alt text for my logo"
+>   />
+>  )
 > }
 > ```
 
@@ -95,29 +95,29 @@ log in or buy a product.
 > import { Button } from '#app/components/atoms/Button'
 > import HeroCallToAction from '#app/components/organisms/Hero/HeroCallToAction'
 >
-> export const meta: MetaFunction = () => [{ title: 'Epic News' }]
+> export const meta: MetaFunction = () => [{ title: 'Island Gamer' }]
 >
 > export default function App() {
-> 	return (
-> 		<HeroCallToAction image={heroImage}>
-> 			<div className="bg-primary flex h-full w-full flex-col items-stretch justify-between p-16">
-> 				<div>
-> 					<h2 className="text-h2 text-primary-foreground">A Sample Title</h2>
-> 					<p className="text-primary-foreground py-8">
-> 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-> 						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-> 						enim ad minim veniam, quis nostrud exercitation ullamco laboris
-> 						nisi ut aliquip ex ea commodo consequat.
-> 					</p>
-> 				</div>
-> 				<div>
-> 					<Button size="wide" variant="outline">
-> 						Sign Up
-> 					</Button>
-> 				</div>
-> 			</div>
-> 		</HeroCallToAction>
-> 	)
+>  return (
+>   <HeroCallToAction image={heroImage}>
+>    <div className="flex h-full w-full flex-col items-stretch justify-between bg-primary p-16">
+>     <div>
+>      <h2 className="text-h2 text-primary-foreground">A Sample Title</h2>
+>      <p className="py-8 text-primary-foreground">
+>       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+>       eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+>       enim ad minim veniam, quis nostrud exercitation ullamco laboris
+>       nisi ut aliquip ex ea commodo consequat.
+>      </p>
+>     </div>
+>     <div>
+>      <Button size="wide" variant="outline">
+>       Sign Up
+>      </Button>
+>     </div>
+>    </div>
+>   </HeroCallToAction>
+>  )
 > }
 > ```
 
@@ -139,18 +139,18 @@ log in or buy a product.
 > import SignInButtons from '~/components/molecules/SignInButtons'
 >
 > export default function App() {
-> 	return (
-> 		<ParallaxBackground
-> 			image={dobuHeroImage}
-> 			title="DoBu Martial Arts" // Optional prop
-> 			description="Stronger together" // Optional prop
-> 			logo={iconPlaceholder} // Optional prop
-> 			altText="DoBu Martial Arts logo" // Optional prop
-> 		>
-> 			{/* Children are optional */}
-> 			<SignInButtons />
-> 		</ParallaxBackground>
-> 	)
+>  return (
+>   <ParallaxBackground
+>    image={dobuHeroImage}
+>    title="DoBu Martial Arts" // Optional prop
+>    description="Stronger together" // Optional prop
+>    logo={iconPlaceholder} // Optional prop
+>    altText="DoBu Martial Arts logo" // Optional prop
+>   >
+>    {/* Children are optional */}
+>    <SignInButtons />
+>   </ParallaxBackground>
+>  )
 > }
 > ```
 
@@ -177,13 +177,13 @@ subject.
 > import dobuHeroImage from '~/assets/jpg/dobu-hero.jpg'
 >
 > export default function App() {
-> 	return (
-> 		<FeatureHighlightCard
-> 			title="Test title"
-> 			description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-> 			image={dobuHeroImage}
-> 		/>
-> 	)
+>  return (
+>   <FeatureHighlightCard
+>    title="Test title"
+>    description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
+>    image={dobuHeroImage}
+>   />
+>  )
 > }
 > ```
 
@@ -206,7 +206,7 @@ consistently found on every page of the website.
 > import Navbar from '~/components/organisms/Navbar'
 >
 > export default function App() {
-> 	return <NavBar />
+>  return <NavBar />
 > }
 > ```
 
@@ -226,11 +226,11 @@ consistently found on every page of the website.
 > import NavbarLink from "~/components/organisms/Navbar/NavbarLink";
 >
 > export default function App() {
-> 	return (
+>  return (
 >     <Navbar>
 >       <NavBarLink to="/">Home</NavbarLink>;
 >       <NavBarLink to="/about">About</NavbarLink>;
 >     </Navbar>
-> 	)
+>  )
 > }
 > ```

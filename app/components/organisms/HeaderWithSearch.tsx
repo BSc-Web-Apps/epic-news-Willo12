@@ -10,7 +10,7 @@ export default function HeaderWithSearch() {
   return (
     <header className="bg-primary/10 py-6 dark:bg-dark-primary/10">
       <nav className="container flex flex-wrap items-center justify-between gap-4 sm:flex-nowrap md:gap-8">
-        <NavLogo linkDestination={"hi"} />
+        <NavLogo />
         <div className="ml-auto hidden max-w-sm flex-1 sm:block">
           {searchBar}
         </div>
