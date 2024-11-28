@@ -9,15 +9,14 @@ export default {
   content: ['./app/**/*.{ts,tsx,jsx,js}'],
   darkMode: 'class',
   theme: {
-    colors: {
-      colorprimary: '#B3B3B3',
-    },
+
     container: {
       center: true,
       padding: '2rem',
       screens: {
         '2xl': '1400px',
       },
+
     },
     extend: extendedTheme,
   },

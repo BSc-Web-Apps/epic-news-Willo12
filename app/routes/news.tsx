@@ -7,7 +7,6 @@ export default function News() {
         <div className="container">
           <h1 className="text-h1">News</h1>
           <div className="flex space-x-4 py-4">
-            {/* BUG: CSS doesn't work for some reason */}
             <NavLink
               to="technology"
               prefetch="intent"
