@@ -12,9 +12,6 @@ export default function Index() {
           <MainHeadline />
         </div>
       </main>
-
-
-
     </>
   )
 }
