@@ -12,10 +12,10 @@ export default function HeaderWithSearch() {
       <nav className="container flex flex-wrap items-center justify-between gap-4 sm:flex-nowrap md:gap-8">
         <NavLogo />
         <div>
-          <Link to="/news">News</Link>
+          <Link to="/news" prefetch='intent' className="text-sm font-semibold text-foreground transition hover:text-primary-foreground">News</Link>
         </div>
         <div>
-          <Link to="/about-us">About Us</Link>
+          <Link to="/about-us" prefetch='intent' className="text-sm font-semibold text-foreground transition hover:text-primary-foreground">About Us</Link>
         </div>
         <div className="ml-auto hidden max-w-sm flex-1 sm:block">
           {searchBar}
