@@ -1,5 +1,5 @@
 import { type LinksFunction } from '@remix-run/node'
-import { useLoaderData } from '@remix-run/react'
+import { Outlet, useLoaderData } from '@remix-run/react'
 import MainHeadline from "~/components/molecules/MainHeadline.tsx"
 import Document from '~/components/shared-layout/Document'
 import ThemeSwitch from '~/components/shared-layout/ThemeSwitch'
@@ -26,14 +26,13 @@ export default function App() {
       <div className="flex h-screen flex-col justify-between">
         <HeaderWithSearch />
         <div className="flex-1 ">
-          <main className="mx-20 mt-5">
-            <div className='flex gap-4'>
-              <MainHeadline />
-              <MainHeadline />
-            </div>
-          </main>
-          <div className="w-full py-16">
-          </div>
+          {/* <main className="mx-20 mt-5"> */}
+          {/*   <div className='flex gap-4'> */}
+          {/*     <MainHeadline /> */}
+          {/*     <MainHeadline /> */}
+          {/*   </div> */}
+          {/* </main> */}
+          <Outlet />
         </div>
         <div className='container flex justify-between pb-5'>
           <ThemeSwitch userPreference={data.requestInfo.userPrefs.theme} />
