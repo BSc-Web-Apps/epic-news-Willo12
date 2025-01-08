@@ -28,8 +28,8 @@ const ArticleCard = ({ title, category = "General News", imageId }: ArticleCardP
   }
   return (
     <>
-      <div>
-        <div><img src={imageSrc} alt={title} /></div>
+      <div className="cursor-pointer transition-all duration-500 hover:scale-105">
+        <div ><img className="h-64 w-full rounded-t object-cover" src={imageSrc} alt={title} /></div>
         <div className="h-40 bg-red-900 p-4 transition-all duration-500 hover:h-52">
           <h1 className="font-semibold text-lg">{title}</h1>
           <div className="flex">
