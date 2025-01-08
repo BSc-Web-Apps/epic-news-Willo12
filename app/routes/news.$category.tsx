@@ -31,11 +31,11 @@ export default function NewsCategoryPage() {
 
       <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
         {filteredArticles.map(article => (
-          // TODO: fix category error
+          // BUG: fix category error
           <ArticleCard
             key={article.id}
             title={article.title}
-            category={article.category?.name}
+            category={article.category?.name || "General News"}
             imageId={article.images[0]?.id}
           />
         ))}
