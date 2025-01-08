@@ -39,6 +39,7 @@ export default function NewsCategoryPage() {
           <ArticleCard
             key={article.id}
             title={article.title}
+            articleId={article.id}
             category={article.category?.name || "General News"}
             imageId={article.images[0]?.id}
           />
