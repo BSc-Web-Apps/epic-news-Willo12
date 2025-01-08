@@ -96,7 +96,6 @@ export async function action({ request }: ActionFunctionArgs) {
       { status: submission.status === 'error' ? 400 : 200 },
     )
   }
-
   const {
     id: articleId,
     title,
