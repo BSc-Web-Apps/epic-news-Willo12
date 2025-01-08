@@ -51,6 +51,8 @@ export default function Index() {
 
                   title={article.title}
 
+                  articleId={article.id}
+
                   category={article.category?.name}
 
                   imageId={article.images[0]?.id}
