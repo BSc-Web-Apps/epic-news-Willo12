@@ -12,6 +12,11 @@ export async function loader({ params }: LoaderFunctionArgs) {
   const categoryTitle = toTitleCase(category)
 
   const filteredArticles = await prisma.article.findMany({
+    where: {
+      category: {
+        slug: category, // Retrieves only articles in the specified category
+      },
+    },
     select: {
       id: true,
       title: true,
@@ -31,7 +36,6 @@ export default function NewsCategoryPage() {
 
       <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
         {filteredArticles.map(article => (
-          // BUG: fix category error
           <ArticleCard
             key={article.id}
             title={article.title}
