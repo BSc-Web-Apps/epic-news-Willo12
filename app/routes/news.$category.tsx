@@ -13,6 +13,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
 
   const filteredArticles = await prisma.article.findMany({
     where: {
+      isPublished: true,
       category: {
         slug: category, // Retrieves only articles in the specified category
       },

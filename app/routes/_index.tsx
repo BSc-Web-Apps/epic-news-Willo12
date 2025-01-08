@@ -11,6 +11,7 @@ export async function loader() {
 
   const allArticles = await prisma.article.findMany({
 
+    where: { isPublished: true },
     select: {
 
       id: true,
