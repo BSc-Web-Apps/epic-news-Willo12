@@ -5,9 +5,10 @@ import { FaNewspaper } from 'react-icons/fa'
 import { Link } from "@remix-run/react"
 import { getArticleImgSrc } from '~/utils/misc.tsx'
 import siteLogo from '~/assets/svg/icon-placeholder.svg'
+import { FaRegListAlt } from "react-icons/fa";
+import { RiUserCommunityFill } from "react-icons/ri";
 
-
-type Category = "Business" | "Technology" | "Entertainment" | "General News";
+type Category = "Reviews" | "Technology" | "Community" | "General News";
 
 
 interface ArticleCardProps {
@@ -22,9 +23,9 @@ interface ArticleCardProps {
 const ArticleCard = ({ title, category = "General News", imageId, articleId }: ArticleCardProps) => {
   const imageSrc = imageId ? getArticleImgSrc(imageId) : siteLogo
   const ArticleIcons: Record<Category, JSX.Element> = {
-    Business: <MdBusinessCenter />,
+    Reviews: <FaRegListAlt />,
     Technology: <MdComputer />,
-    Entertainment: <LiaTheaterMasksSolid />,
+    Community: <RiUserCommunityFill />,
     "General News": <FaNewspaper />,
   }
   return (
