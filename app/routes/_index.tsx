@@ -1,5 +1,6 @@
 import MainHeadline from '#app/components/molecules/MainHeadline.js'
 import ArticleCard from '#app/components/organisms/ArticleCard.js'
+import MainHeadlines from '#app/components/organisms/MainHeadlines.js'
 import { type MetaFunction } from '@remix-run/node'
 import { json, Link, useLoaderData } from '@remix-run/react'
 import { prisma } from '~/utils/db.server'
@@ -36,40 +37,28 @@ export default function Index() {
     <>
       <main className="mx-20 mt-5">
         <div className="container py-16">
-
           <h2 className="mb-8 text-h2 font-normal">Latest news</h2>
 
-
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
-
+          <div className="grid grid-cols-4 gap-6 md:grid-cols-3 lg:grid-cols-4">
             {allArticles.length > 0 ? (
-
-              allArticles.map(article => (
-
+              allArticles.map((article, index) => (
                 <ArticleCard
-
                   key={article.id}
-
                   title={article.title}
-
                   articleId={article.id}
-
                   category={article.category?.name}
-
                   imageId={article.images[0]?.id}
-
+                  className={
+                    index < 2
+                      ? "" // Custom class for the first two articles
+                      : "" // Default tyling for the rest
+                  }
                 />
-
               ))
-
             ) : (
-
               <p>No articles found</p>
-
             )}
-
           </div>
-
         </div>
       </main>
     </>

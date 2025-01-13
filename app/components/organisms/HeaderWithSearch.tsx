@@ -21,14 +21,7 @@ export default function HeaderWithSearch({ isAdminUser }: HeaderWithSearchProps)
           </div>
         </Link>
         <div className="flex flex-1 items-center justify-center gap-8">
-          {isAdminUser && (
-            <Link
-              to="/admin-review"
-              className="rounded-lg bg-gray-400 px-4 py-2 text-sm font-semibold text-foreground transition hover:bg-green-800"
-            >
-              Admin Review
-            </Link>
-          )}
+
           <Link
             to="/news"
             className="text-sm font-semibold text-foreground transition hover:text-foreground/80"
@@ -48,6 +41,14 @@ export default function HeaderWithSearch({ isAdminUser }: HeaderWithSearchProps)
           >
             Contact us
           </Link>
+          {isAdminUser && (
+            <Link
+              to="/admin-review"
+              className="rounded-lg bg-gray-400 px-4 py-2 text-sm font-semibold text-foreground transition hover:bg-green-800"
+            >
+              Admin Review
+            </Link>
+          )}
         </div>
         <div className="ml-auto hidden max-w-sm flex-1 sm:block">
           {searchBar}
