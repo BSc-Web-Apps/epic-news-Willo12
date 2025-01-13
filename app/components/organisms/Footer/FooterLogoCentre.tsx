@@ -4,8 +4,8 @@ import logoTest from '../../../assets/svg/logoTest.svg'
 import { type FooterProps } from './FooterBasic'
 import NavLogo from '#app/components/molecules/NavLogo.js'
 const FooterLogoCentre = ({
-  companyName = 'CHANGE THIS TO YOUR COMPANY NAME!',
-  altText = 'Our company logo',
+  companyName = 'Jersey Gaming News',
+  altText = 'Jersey Gaming News logo',
 }: FooterProps) => {
   return (
     <footer className="bg-secondary lg:py-16 dark:bg-dark-secondary">
@@ -15,30 +15,12 @@ const FooterLogoCentre = ({
             className="flex flex-col items-start gap-6 py-8
 					font-bold text-secondary-foreground lg:flex-row dark:text-dark-secondary-foreground"
           >
-            <div>
-              <NavLink to="#">Nav Label</NavLink>
-            </div>
-            <div>
-              <NavLink to="#">Nav Label</NavLink>
-            </div>
-            <div>
-              <NavLink to="#">Nav Label</NavLink>
-            </div>
           </div>
           <NavLogo />
           <div
             className="flex flex-col items-start gap-6 py-8
 					font-bold text-secondary-foreground lg:flex-row dark:text-dark-secondary-foreground"
           >
-            <div>
-              <NavLink to="#">Nav Label</NavLink>
-            </div>
-            <div>
-              <NavLink to="#">Nav Label</NavLink>
-            </div>
-            <div>
-              <NavLink to="#">Nav Label</NavLink>
-            </div>
           </div>
         </div>
 

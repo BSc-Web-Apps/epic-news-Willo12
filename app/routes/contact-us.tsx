@@ -1,4 +1,4 @@
-const AboutUs = () => {
+const contact = () => {
   return (
     <>
       <div className="flex h-screen w-screen items-center justify-center">
@@ -8,4 +8,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default contact

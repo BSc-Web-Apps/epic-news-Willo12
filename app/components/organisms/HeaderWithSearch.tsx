@@ -16,8 +16,8 @@ export default function HeaderWithSearch({ isAdminUser }: HeaderWithSearchProps)
       <nav className="container flex flex-wrap items-center justify-between gap-4 sm:flex-nowrap md:gap-8">
         <Link to="/" className="group">
           <div className="flex items-center gap-4 transition group-hover:opacity-80">
-            <img src={logo} alt="Epic News Logo" className="w-16" />
-            <span className="text-sm font-bold text-foreground">Epic News</span>
+            <img src={logo} alt="Jersey Gaming News Logo" className="w-16" />
+            <span className="text-sm font-bold text-foreground">Jersey Gaming News</span>
           </div>
         </Link>
         <div className="flex flex-1 items-center justify-center gap-8">
