@@ -30,6 +30,7 @@ const ArticleCard = ({ title, category = "General News", imageId, articleId, cla
   };
 
   return (
+<<<<<<< HEAD
     <Link to={`/article/${articleId}`}>
       <div className={`cursor-pointer transition-all duration-500 hover:scale-105 ${className}`}>
         <div>
@@ -45,6 +46,19 @@ const ArticleCard = ({ title, category = "General News", imageId, articleId, cla
             <div className="flex space-x-1">
               {category ? ArticleIcons[category] : <FaNewspaper />}
               <p>{category}</p>
+=======
+    <>
+      <Link to={`/article/${articleId}`}>
+        <div className="cursor-pointer transition-all duration-500 hover:scale-105">
+          <div ><img className="h-64 w-full rounded-t object-cover" src={imageSrc} alt={title} /></div>
+          <div className="h-40 bg-red-900 p-4 transition-all duration-500 hover:h-52 flex flex-col justify-between">
+            <h1 className="font-semibold text-lg w-40">{title}</h1>
+            <div className="flex items-baseline">
+              <div className="flex space-x-1">
+                {category ? ArticleIcons[category] : <FaNewspaper />}
+                <p>{category}</p>
+              </div>
+>>>>>>> 9c02bdc (.)
             </div>
           </div>
         </div>
