@@ -35,11 +35,11 @@ export default function Index() {
   const { allArticles } = useLoaderData<typeof loader>()
   return (
     <>
-      <main className="mx-20 mt-5">
+      <main className="mx-6 mt-2 lg:mx-20 lg:mt-5">
         <div className="container py-16">
           <h2 className="mb-8 text-h2 font-normal">Latest news</h2>
 
-          <div className="grid grid-cols-4 gap-6 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
             {allArticles.length > 0 ? (
               allArticles.map((article, index) => (
                 <ArticleCard
@@ -48,11 +48,8 @@ export default function Index() {
                   articleId={article.id}
                   category={article.category?.name}
                   imageId={article.images[0]?.id}
-                  className={
-                    index < 2
-                      ? "" // Custom class for the first two articles
-                      : "" // Default tyling for the rest
-                  }
+                  index={index}
+
                 />
               ))
             ) : (

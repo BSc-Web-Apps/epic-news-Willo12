@@ -16,11 +16,14 @@ interface ArticleCardProps {
   title: string;
   category?: Category;
   imageId?: string;
-  className?: string; // Allow passing custom class names
+  index?: number;
 }
 
-const ArticleCard = ({ title, category = "General News", imageId, articleId, className }: ArticleCardProps) => {
+const ArticleCard = ({ title, category = "General News", imageId, articleId, index }: ArticleCardProps) => {
   const imageSrc = imageId ? getArticleImgSrc(imageId) : siteLogo;
+  const isHeadlineArticle = index === 0 || index === 1;
+
+  console.log({ index, isHeadlineArticle, title });
 
   const ArticleIcons: Record<Category, JSX.Element> = {
     Reviews: <FaRegListAlt />,
@@ -28,11 +31,9 @@ const ArticleCard = ({ title, category = "General News", imageId, articleId, cla
     Community: <RiUserCommunityFill />,
     "General News": <FaNewspaper />,
   };
-
   return (
-<<<<<<< HEAD
     <Link to={`/article/${articleId}`}>
-      <div className={`cursor-pointer transition-all duration-500 hover:scale-105 ${className}`}>
+      <div className={`cursor-pointer transition-all duration-500 hover:scale-105 ${isHeadlineArticle ? "col-span-4 text-red-500" : ""}`}>
         <div>
           <img
             className="h-64 w-full rounded-t object-cover"
@@ -46,25 +47,12 @@ const ArticleCard = ({ title, category = "General News", imageId, articleId, cla
             <div className="flex space-x-1">
               {category ? ArticleIcons[category] : <FaNewspaper />}
               <p>{category}</p>
-=======
-    <>
-      <Link to={`/article/${articleId}`}>
-        <div className="cursor-pointer transition-all duration-500 hover:scale-105">
-          <div ><img className="h-64 w-full rounded-t object-cover" src={imageSrc} alt={title} /></div>
-          <div className="h-40 bg-red-900 p-4 transition-all duration-500 hover:h-52 flex flex-col justify-between">
-            <h1 className="font-semibold text-lg w-40">{title}</h1>
-            <div className="flex items-baseline">
-              <div className="flex space-x-1">
-                {category ? ArticleIcons[category] : <FaNewspaper />}
-                <p>{category}</p>
-              </div>
->>>>>>> 9c02bdc (.)
             </div>
           </div>
         </div>
       </div>
     </Link>
-  );
+  )
 };
 
 export default ArticleCard;
