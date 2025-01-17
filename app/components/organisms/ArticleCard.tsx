@@ -33,7 +33,7 @@ const ArticleCard = ({ title, category = "General News", imageId, articleId, ind
   };
   return (
     <Link to={`/article/${articleId}`}>
-      <div className={`cursor-pointer transition-all duration-500 hover:scale-105 ${isHeadlineArticle ? "col-span-4 text-red-500" : ""}`}>
+      <div className={`cursor-pointer transition-all duration-500 hover:scale-105 ${isHeadlineArticle ? "" : ""}`}>
         <div>
           <img
             className="h-64 w-full rounded-t object-cover"
